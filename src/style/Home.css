@@ -1,13 +1,48 @@
+
 h1{
     color: #fff;
     font-size: 40px;
-    margin-top: 32px;
-    margin-left: 23 px;
+    text-align: left;
+    margin-top: 32 px;
 }
-.btn{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+.btn {
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
 
+.btn a {
+  text-decoration: none;
+}
+
+.btn button {
+  width: 420px;
+  padding: 12px 20px;
+  font-size: 30px;
+  font-weight: 500;
+  font-family: "Iceland", sans-serif;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(98, 121, 217, 0.31);
+  color: white;
+  border-radius: 26px;
+  box-shadow: 2px 1px 6.6px -1px rgba(139, 37, 39, 0.71);
+
+}
+
+
+
+.login button:hover {
+  background-color: #1d4ed8;
+}
+
+
+.register button:hover {
+  background-color: #15803d;
 }

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import "@/style/RegisterForm.css";
 
 export default function RegisterForm() {
   const router = useRouter();
@@ -54,15 +55,16 @@ export default function RegisterForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="form-register">
+    <div className="register-page">
 
-      <h1>
-        Créer un compte
-      </h1>
+    <form onSubmit={handleSubmit} className="form-register">
 
       {error && (
         <p>{error}</p>
       )}
+      
+      
+      
 
       <input
         type="text"
@@ -98,7 +100,7 @@ export default function RegisterForm() {
         onChange={handleChange}
         
       />
-
+     
       <button
         type="submit"
         disabled={loading}
@@ -107,5 +109,6 @@ export default function RegisterForm() {
       </button>
 
     </form>
+    </div>
   );
 }
