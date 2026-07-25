@@ -1,13 +1,50 @@
+.background {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.28);
+}
+
+
 h1{
     color: #fff;
-    font-size: 40px;
-    margin-top: 32px;
-    margin-left: 23 px;
+    margin-top: 30px;
+    margin-left: 25px;
 }
-.btn{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
 
+.btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  height: 400px;
+}
+
+.btn button {
+  width: 400px;
+  height: 55px;
+
+  border: none;
+  border-radius: 26px;
+
+  color: white;
+
+  box-shadow: 2px 1px 6.6px -1px rgba(139, 37, 39, 0.71);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(98, 122, 217, 0.533);
+  font-size: 24px;
+  font-weight: 500;
+  font-family: var(--font-iceland), sans-serif;  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.login button:hover,.register button:hover {
+  background-color: #8B2527; /* blue */
+  transform: translateY(-3px);
 }

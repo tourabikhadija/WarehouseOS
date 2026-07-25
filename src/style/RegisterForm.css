@@ -1,0 +1,149 @@
+.background {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.28);
+}
+
+h1{
+    color: #fff;
+}
+
+.register-card {
+  width: 420px;
+  min-height: 400px;
+  padding: 40px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  background: rgba(255, 255, 255, 0.184);
+
+  border: 1px solid rgba(159, 171, 220, 0.767);
+
+  border-radius: 34px;
+
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+
+  box-shadow:
+    0 150px 45px 0 rgba(0, 0, 0, 0.246);
+  font-family: var(--font-iceland), sans-serif;  cursor: pointer;
+  overflow: hidden;
+
+  position: relative;
+
+  margin: auto;
+}
+
+.register-card input::placeholder {
+  color: rgba(255, 255, 255, 0.591);
+}
+
+
+/* Inputs + Button نفس الحجم */
+.register-card input,
+.register-card button {
+  width: 100%;
+  height: 50px;
+
+  box-sizing: border-box;
+
+  border-radius: 26px;
+  color: white;
+  font-size: 18px;
+}
+
+
+/* Inputs */
+.register-card input {
+  padding: 0 15px;
+
+  background: rgba(255,255,255,0.08);
+
+  border: 1px solid rgba(98, 122, 217, 0.385);
+
+  color: white;
+
+  outline: none;
+  font-family: var(--font-iceland), sans-serif;  cursor: pointer;
+  transition: 0.3s ease;
+
+  box-shadow: 2px 1px 6.6px -1px rgba(139, 37, 39, 0.71);
+  outline: none;
+}
+
+
+.register-card input:focus {
+  border-color: #6279D9;
+  box-shadow: 2px 1px 6.6px -1px rgba(143, 34, 36, 0.986);
+
+}
+
+
+/* Button */
+.register-card button {
+  border: none;
+
+  background: #6279D9;
+
+  color: white;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+  box-shadow:
+    0 150px 45px 0 rgba(0, 0, 0, 0.246);
+}
+
+
+.register-card button:hover {
+  background: #8B2527;
+  
+  transform: translateY(-2px);
+}
+
+.error-message {
+
+
+  padding: 12px 15px;
+
+  background: rgba(139, 37, 39, 0.15);
+
+  border: 1px solid rgba(139, 37, 39, 0.71);
+
+  border-radius: 10px;
+
+  color: #e80505;
+
+  font-size: 20px;
+
+  font-weight: 500;
+
+  text-align: center;
+
+  box-shadow: 2px 1px 6.6px -1px rgba(139, 37, 39, 0.71);
+
+  animation: errorShow 0.3s ease;
+}
+
+
+@keyframes errorShow {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
