@@ -1,17 +1,7 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
 .background {
   position: absolute;
   inset: 0;
   z-index: -1;
-}
-
-body {
-  overflow: hidden;
 }
 
 .overlay {
@@ -22,36 +12,16 @@ body {
 
 h1{
     color: #fff;
-    margin-top: 23px;
-    margin-left: 22px;
 }
-.form-register {
-  width: 100%;
-  min-height: 100vh;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.register-card {
+.login-card {
+    top: 82px;
   width: 420px;
-  min-height: 400px;
+  min-height: 250px;
   padding: 40px;
+
   display: flex;
   flex-direction: column;
   gap: 30px;
-  background-color: rgba(255, 255, 255, 0.18);
-  border-radius: 24px;
-  border: 1px solid rgb(164, 175, 223);
-  box-shadow: 0 15px 45px 0 rgba(0, 0, 0, 0.95);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  opacity: 0.8;
-}
-
-.form-register input::placeholder {
-  color: rgba(255,255,255,0.6);
 
   background: rgba(255, 255, 255, 0.184);
 
@@ -72,14 +42,14 @@ h1{
   margin: auto;
 }
 
-.register-card input::placeholder {
+.login-card input::placeholder {
   color: rgba(255, 255, 255, 0.591);
 }
 
 
 /* Inputs + Button نفس الحجم */
-.register-card input,
-.register-card button {
+.login-card input,
+.login-card button {
   width: 100%;
   height: 50px;
 
@@ -92,7 +62,7 @@ h1{
 
 
 /* Inputs */
-.register-card input {
+.login-card input {
   padding: 0 15px;
 
   background: rgba(255,255,255,0.08);
@@ -110,90 +80,67 @@ h1{
 }
 
 
-.register-card input:focus {
+.login-card input:focus {
   border-color: #6279D9;
   box-shadow: 2px 1px 6.6px -1px rgba(143, 34, 36, 0.986);
-
 
 }
 
 
 /* Button */
-
-.form-register button {
-  width: 400px;
-  padding: 12px 20px;
- 
-  font-family: "Iceland", sans-serif;
-  
-  border: none;
-  border-radius: 31px;
-
-  background-color: #8B2527;
-  color: white;
-
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  font-size: 27px;
-  cursor: pointer;
-  transition: 0.3s;
-  box-shadow: 0 4 4 0 #0605058f ;
-}
-
-.form-register button:hover {
-  opacity: 0.85;
-  background: #15803d;
-}
-
-
-/* Error message */
-.form-register p {
-  color: #ff6b6b;
-  text-align: center;
-  font-size: 23px;
-}
-
-.register-card button {
+.login-card button {
   border: none;
 
   background: #6279D9;
 
   color: white;
 
-  font-weight: 600;
-
+ 
+  font-size: 25px;
   cursor: pointer;
-
+  font-family: var(--font-iceland), sans-serif;  cursor: pointer;
   transition: 0.3s ease;
   box-shadow:
     0 150px 45px 0 rgba(0, 0, 0, 0.246);
 }
 
 
-.register-card button:hover {
+.login-card button:hover {
   background: #8B2527;
   
   transform: translateY(-2px);
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .error-message {
 
 
   padding: 12px 15px;
-  margin-bottom: 10px;
 
   background: rgba(139, 37, 39, 0.15);
 
   border: 1px solid rgba(139, 37, 39, 0.71);
 
   border-radius: 10px;
-  width: 100%;
 
   color: #e80505;
-  
 
   font-size: 20px;
 
@@ -206,23 +153,6 @@ h1{
   animation: errorShow 0.3s ease;
 }
 
-.register_page {
-  padding: 20px;
-  height: 100dvh;
-}
-
-.register_page h1 {
-  margin-bottom: 20px;
-}
-
-.form_register {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-
 
 @keyframes errorShow {
   from {
@@ -234,5 +164,4 @@ h1{
     opacity: 1;
     transform: translateY(0);
   }
-
 }

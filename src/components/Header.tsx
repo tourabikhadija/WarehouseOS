@@ -1,5 +1,6 @@
 "use client";
 import { signOut } from "next-auth/react";
+import "@/style/Header.css";
 
 export default function Header({user} : any){
     return(
@@ -7,10 +8,15 @@ export default function Header({user} : any){
             
           <nav>
            <h2>WarehouseOS</h2>
-
-             <span>
+             <div className="compt">
+                <span>
                 {user?.name}
-             </span>
+                </span>
+                 <span>
+                {user?.email}
+                </span>
+             </div>
+             
 
                  <button onClick={()=> signOut ({callbackUrl : "/login"})}>
                     Déconnexion

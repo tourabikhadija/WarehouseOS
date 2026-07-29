@@ -3,6 +3,8 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { signIn } from "next-auth/react";
+import Image from "next/image";
+import "@/style/LoginForm.css";
 
 export default function LoginForm() {
   const router = useRouter();
@@ -40,15 +42,18 @@ export default function LoginForm() {
 
   return (
     <form onSubmit={handleSubmit}>
-
-      <h1>Connexion</h1>
-
+       <h1>WarehouseOS</h1>
+      <div className="background">
+            <Image src="/images/bg.jpg" alt="img-cover" fill priority 
+            />
+            <div className="overlay"></div>
+            </div>
 
       {error && (
-        <p>{error}</p>
+        <p className="error-message">{error}</p>
       )}
 
-
+     <div className="login-card">
       <input
         type="email"
         placeholder="Adresse email"
@@ -69,7 +74,7 @@ export default function LoginForm() {
         {loading ? "Connexion..." : "Se connecter"}
       </button>
 
-
+    </div>
     </form>
   );
 }

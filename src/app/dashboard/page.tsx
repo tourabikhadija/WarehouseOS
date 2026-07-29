@@ -5,6 +5,7 @@ import { authOptions } from "@/lib/auth";
 import LogoutButton from "@/components/LogoutButton";
 import Header from "@/components/Header"; 
 import Footer from "@/components/Footer";
+import "@/style/dashboard.css";
 
 
 export default async function Dashboard() {
@@ -20,72 +21,58 @@ export default async function Dashboard() {
   const loginDate = new Date().toLocaleString("fr-FR");
 
 
-  return (
-    <div>
-      
-      <Header user={session.user} />
+  
+ return (
+  <div className="dashboard">
 
-      <h1>
-        Tableau de bord WarehouseOS
-      </h1>
+    <Header user={session.user} />
 
 
-      {session.user ? (
-        <div>
+    {session.user ? (
+      <div className="dashboard-content">
 
-          <h2>
-            Bienvenue {session.user.name} 👋
-          </h2>
+        
 
-
+        <div className="user-card">
+        
+         <h2>
+          Bienvenue
+        </h2>
+          
           <div>
 
-            <h3>
-              Informations utilisateur
-            </h3>
-
-
-            <p>
-              Nom : {session.user.name}
-            </p>
-
-
-            <p>
-              Email : {session.user.email}
-            </p>
-
+           <h3>
+            Informations utilisateur
+          </h3>
+          
           </div>
+          
 
+          <p>
+            Nom : {session.user.name}
+          </p>
+
+          <p>
+            Email : {session.user.email}
+          </p>
+
+          
+            <p>Date de connexion :{loginDate}  
+            </p>
+            
+          
 
         </div>
 
-      ) : (
-
-        <p>
-          Aucun utilisateur connecté
-        </p>
-
-      )}
-
-
-      <div>
-
-        <h3>
-          Date de connexion
-        </h3>
-
-
-        <p>
-          {loginDate}
-        </p>
-
       </div>
+    ) : (
+      <p className="no-user">
+        Aucun utilisateur connecté
+      </p>
+    )}
 
+    <Footer />
 
-      
-      
-      <Footer/>
-
-    </div>
-  );
+  </div>
+);
 }

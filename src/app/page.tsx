@@ -6,9 +6,11 @@ export default function Home(){
     return (
         <main className="home">
             <h1>WarehouseOS</h1>
-              <Image src="/images/bg.jpg" alt="img-cover" fill priority style={{
-                 zIndex: -1,}} 
-               />
+              <div className="background">
+                 <Image src="/images/bg.jpg" alt="img-cover" fill priority 
+                   />
+                   <div className="overlay"></div>
+              </div>
 
 
              <div className="btn">

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 import "@/style/RegisterForm.css";
 
 export default function RegisterForm() {
@@ -55,17 +56,29 @@ export default function RegisterForm() {
   }
 
   return (
-    <div className="register-page">
-
-    <form onSubmit={handleSubmit} className="form-register">
-
-      {error && (
-        <p>{error}</p>
+    <div>
+    <h1>WarehouseOS</h1>
+    <div className="register_page">
+    
+      
+      
+      <div className="form_register">
+              {error && (
+        <p className="error-message">{error}</p>
       )}
       
+    <form onSubmit={handleSubmit} >
+     
+
+       <div className="background">
+      <Image src="/images/bg.jpg" alt="img-cover" fill priority 
+      />
+      <div className="overlay"></div>
+      </div>
       
       
 
+      <div className="register-card">
       <input
         type="text"
         name="name"
@@ -100,15 +113,21 @@ export default function RegisterForm() {
         onChange={handleChange}
         
       />
-     
-      <button
+
+
+      <button 
         type="submit"
         disabled={loading}
       >
         {loading ? "Inscription..." : "S'inscrire"}
       </button>
-
+    </div>
     </form>
+
+      </div>
+
+
+    </div>
     </div>
   );
 }
